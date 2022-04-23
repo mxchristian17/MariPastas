@@ -1,141 +1,153 @@
+import React, { useState } from 'react'
+import Swal from 'sweetalert2';
+import emailjs from '@emailjs/browser';
+
 function Form() {
+
+    const [errors, setErrors] = useState({name : null, email : null})
+
+    const [contact,  setContact] = useState({
+        name:'',
+        phone:'',
+        email:'',
+        status: false
+    })
+    
+    const validateName = (value, err) => {
+        
+        const spaceIndexOf = value.indexOf(' ')
+
+        err = ({...err, name : undefined})
+        if(value.length > 100) err = ({...err, name : "El nombre es demasiado largo"})
+        if((value.length < 7) || (spaceIndexOf === -1) || (spaceIndexOf === value.length-1)) err = ({...err, name : "Por favor, ingresá un nombre y apellido válidos"})
+        if (typeof value !== "undefined") {
+            if (!value.match(/^[a-zA-Z ]+$/)) {
+                err = ({...err, name : "El nombre debe contener solo letras y espacios"})
+            }
+        }
+        if(value.length === 0) err = ({...err, name : "Por favor ingresá tu nombre y apellido"})
+        return err
+    }
+    
+    const validateEmail = (value, err) => {
+        err = ({...err, email : undefined})
+        if(value.length > 100) err = ({...err, email : "El email es demasiado largo"})
+        if(value.length < 7) err = ({...err, email : "Por favor ingresá una dirección de email válida"})
+        if (typeof value !== "undefined") {
+            if (!value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                err = ({...err, email : "El email debe tener un formato válido"})
+            }
+        }
+        if(value.length === 0) err = ({...err, email : "Por favor ingresá tu dirección de email"})
+        return err
+    }
+    
+    const handleChange = (e) => {
+        const field = e.target.id
+        const value = e.target.value
+        let err = {...errors}
+
+        if(field === "name") err = validateName(value, err)
+        if(field === "email") err = validateEmail(value, err)
+
+        setErrors(err)
+        
+        setContact({...contact, [field] : value })
+    }
+    
+    const submit = (e) => {
+        e.preventDefault()
+        let err = {...errors}
+        err = validateName(e.target.elements.name.value, err)
+        err = validateEmail(e.target.elements.email.value, err)
+        
+        if(!(typeof(err.name) !== "undefined" ||
+        typeof(err.email) !== "undefined" ||
+        typeof(err.phone) !== "undefined")) message(e)
+        setErrors(err)
+    }
+    
+    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+    const USER_ID = process.env.REACT_APP_USER_ID;
+
+    const message = (e) => {
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+        .then((result) => {
+            console.log(result.text);
+            Swal.fire({
+            icon: 'success',
+            title: 'Message Sent Successfully'
+            })
+        }, (error) => {
+            console.log(error.text);
+            Swal.fire({
+            icon: 'error',
+            title: 'Ooops, something went wrong',
+            text: error.text,
+            })
+        });
+        e.target.reset()
+    }
+
     return (
         <>
-            <div className="mt-5 md:mt-0 md:col-span-2">
-                <form action="#" method="POST">
+            <div className="grid mt-5 md:mt-0 md:col-span-2 w-full">
+                <form onSubmit={submit} className="place-self-center w-full md:w-1/2">
                     <div className="shadow overflow-hidden sm:rounded-md md:m-10">
                         <div className="bg-slate-400 px-4 py-5 sm:p-6">
                             <div className="grid grid-cols-6 gap-6">
-                                <div className="col-span-6 sm:col-span-3">
+                                <div className="col-span-12">
                                     <label
-                                        htmlFor="first-name"
+                                        htmlFor="from_name"
                                         className="block text-sm font-medium text-gray-700"
                                     >
-                                        First name
+                                        Nombre y Apellido
                                     </label>
                                     <input
                                         type="text"
-                                        name="first-name"
-                                        id="first-name"
-                                        autoComplete="given-name"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md"
+                                        name="from_name"
+                                        id="name"
+                                        autoComplete="off"
+                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md p-1"
+                                        onChange={handleChange}
                                     />
+                                    { errors.name && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.name }</div> }
                                 </div>
 
-                                <div className="col-span-6 sm:col-span-3">
+                                <div className="col-span-12">
                                     <label
-                                        htmlFor="last-name"
+                                        htmlFor="from_email"
                                         className="block text-sm font-medium text-gray-700"
                                     >
-                                        Last name
+                                        Email
                                     </label>
                                     <input
                                         type="text"
-                                        name="last-name"
-                                        id="last-name"
-                                        autoComplete="family-name"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md"
-                                    />
-                                </div>
-
-                                <div className="col-span-6 sm:col-span-4">
-                                    <label
-                                        htmlFor="email-address"
-                                        className="block text-sm font-medium text-gray-700"
-                                    >
-                                        Email address
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="email-address"
-                                        id="email-address"
+                                        name="from_email"
+                                        id="email"
                                         autoComplete="email"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full md:text-xl shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full md:text-xl shadow-sm sm:text-sm border-gray-300 rounded-md p-1"
+                                        onChange={handleChange}
                                     />
+                                    { errors.email && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.email }</div> }
                                 </div>
 
-                                <div className="col-span-6 sm:col-span-3">
+                                <div className="col-span-12">
                                     <label
-                                        htmlFor="country"
+                                        htmlFor="message"
                                         className="block text-sm font-medium text-gray-700"
                                     >
-                                        Country
+                                        Mensaje
                                     </label>
-                                    <select
-                                        id="country"
-                                        name="country"
-                                        autoComplete="country-name"
-                                        className="mt-1 block w-full px-1 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-xs md:text-xl"
-                                    >
-                                        <option>United States</option>
-                                        <option>Canada</option>
-                                        <option>Mexico</option>
-                                    </select>
-                                </div>
-
-                                <div className="col-span-6">
-                                    <label
-                                        htmlFor="street-address"
-                                        className="block text-sm font-medium text-gray-700"
-                                    >
-                                        Street address
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="street-address"
-                                        id="street-address"
-                                        autoComplete="street-address"
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        autoComplete="message"
                                         className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md"
-                                    />
+                                    ></textarea>
                                 </div>
-
-                                <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                                    <label
-                                        htmlFor="city"
-                                        className="block text-sm font-medium text-gray-700"
-                                    >
-                                        City
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="city"
-                                        id="city"
-                                        autoComplete="address-level2"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md"
-                                    />
-                                </div>
-
-                                <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                    <label
-                                        htmlFor="region"
-                                        className="block text-sm font-medium text-gray-700"
-                                    >
-                                        State / Province
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="region"
-                                        id="region"
-                                        autoComplete="address-level1"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md"
-                                    />
-                                </div>
-
-                                <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                    <label
-                                        htmlFor="postal-code"
-                                        className="block text-sm font-medium text-gray-700"
-                                    >
-                                        ZIP / Postal code
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="postal-code"
-                                        id="postal-code"
-                                        autoComplete="postal-code"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md"
-                                    />
-                                </div>
+                                
                             </div>
                         </div>
                         <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -143,7 +155,7 @@ function Form() {
                                 type="submit"
                                 className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
-                                Save
+                                Enviar
                             </button>
                         </div>
                     </div>
