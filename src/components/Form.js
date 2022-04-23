@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
 import emailjs from '@emailjs/browser';
+import { NavBar, NavBar2 } from './NavBar';
 
 function Form() {
 
@@ -92,6 +93,8 @@ function Form() {
 
     return (
         <>
+            <NavBar/>
+            <NavBar2/>
             <div className="grid mt-5 md:mt-0 md:col-span-2 w-full">
                 <form onSubmit={submit} className="place-self-center w-full md:w-1/2">
                     <div className="shadow overflow-hidden sm:rounded-md md:m-10">
