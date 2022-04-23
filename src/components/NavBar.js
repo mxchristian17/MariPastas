@@ -20,9 +20,10 @@ export function NavBar2(){
             <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                     <div className="flex items-center justify-between w-full md:w-auto">
-                        <a href="#">
+                        <a href="/#">
                             <span className="sr-only">Workflow</span>
                             <img
+                                alt="img"
                                 className="h-8 w-auto sm:h-10"
                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                             />
@@ -41,7 +42,7 @@ export function NavBar2(){
                             {item.name}
                         </a>
                     ))}
-                    <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                    <a href="/#" className="font-medium text-indigo-600 hover:text-indigo-500">
                         Log in
                     </a>
                 </div>
@@ -89,7 +90,7 @@ export function NavBar2(){
                         ))}
                     </div>
                     <a
-                        href="#"
+                        href="/#"
                         className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
                     >
                         Log in
@@ -180,7 +181,7 @@ export function NavBar() {
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <a
-                                                        href="#"
+                                                        href="/#"
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                                                     >
                                                         Your Profile
@@ -190,7 +191,7 @@ export function NavBar() {
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <a
-                                                        href="#"
+                                                        href="/#"
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                                                     >
                                                         Settings
@@ -200,7 +201,7 @@ export function NavBar() {
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <a
-                                                        href="#"
+                                                        href="/#"
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                                                     >
                                                         Sign out
