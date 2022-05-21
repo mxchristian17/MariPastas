@@ -8,7 +8,6 @@ function Home() {
             showThumbs={ false }
             showStatus={ false }
             showIndicators={ false }
-            showArrows={ false }
             dynamicHeight={ false }
             infiniteLoop={ true }
             autoPlay={ true }
