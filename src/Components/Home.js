@@ -1,6 +1,26 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import CarouselImage from "./Carousel/CarouselImage";
+
 function Home() {
     return (
-        <div className="relative bg-white overflow-hidden">
+        <Carousel
+            showThumbs={ false }
+            showStatus={ false }
+            showIndicators={ false }
+            showArrows={ false }
+            dynamicHeight={ false }
+            infiniteLoop={ true }
+            autoPlay={ true }
+            transitionTime={ 1000 }
+            interval={ 5000 }
+        >
+            <CarouselImage img="assets/img1.png" description="Calidad" />
+            <CarouselImage img="assets/img2.png" description="Calidad" />
+            <CarouselImage img="assets/img3.png" description="Calidad" />
+        </Carousel>
+
+        /*<div className="relative bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                     <svg
@@ -52,7 +72,7 @@ function Home() {
                     alt=""
                 />
             </div>
-        </div>
+        </div>*/
     )
 }
 
