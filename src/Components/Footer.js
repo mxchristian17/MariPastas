@@ -4,19 +4,19 @@ import { FiMail } from "react-icons/fi"
 function Footer() {
     return (
         <div id="footer">
-            <div className="textoDorado inset-y-0  flex justify-between align-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div className="flex p-1 align-center my-auto hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">
-                    <FiMail className='mx-2 text-2xl' />
-                    <FaWhatsapp className='mx-2 text-2xl' />
-                    <FaInstagram className='mx-2 text-2xl' />
-                    <FaFacebook className='mx-2 text-2xl' />
+            <div className="textoDorado inset-y-0  flex justify-between align-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div className="flex p-1 align-center my-auto">
+                    <FiMail className='mx-4 text-lg hover:text-stone-600 focus:outline-none xl:text-4xl' />
+                    <FaWhatsapp className='mx-4 text-lg hover:text-stone-600 focus:outline-none xl:text-4xl' />
+                    <FaInstagram className='mx-4 text-lg hover:text-stone-600 focus:outline-none xl:text-4xl' />
+                    <FaFacebook className='mx-4 text-lg hover:text-stone-600 focus:outline-none xl:text-4xl' />
                 </div>
-                <h1 className="logoPiatti text-6xl text-slate-600">Piatti</h1>
+                <h1 className="logoPiatti text-4xl xl:text-6xl text-slate-600">Piatti</h1>
                 <div>
                     <p>algo</p>
                 </div>
             </div>
-            <h1 className="fondoDorado text-white">Copyright 2020 Piatti pastas. Todos los derechos reservados</h1>
+            <p className="fondoDorado text-sm xl:text-lg  text-white">Copyright 2020 Piatti pastas. Todos los derechos reservados</p>
         </div>
     )
 }

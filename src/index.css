@@ -10,6 +10,9 @@
     font-family: georgia;
     src: url('./Components/Banner/Georgia.ttf');
 }
+*{
+    font-family: georgia;
+}
 .fondoDorado{
     background-color: #D6B36A;
 }

@@ -11,13 +11,6 @@ const navigation = [
     { name: 'Contacto', href: '/contact', current: false },
 ]
 
-// const linksRedes=[
-//     {name: 'Email', href: ''},
-//     {name: 'Whatsapp', href: ''},
-//     {name: 'Instagram', href: ''},
-//     {name: 'Facebook', href: ''}
-// ]
-
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -31,7 +24,7 @@ export default function Example() {
                         <div className="relative flex items-center justify-between h-20">
                             <div className="absolute inset-y-0 right-40 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
                                         <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -41,7 +34,7 @@ export default function Example() {
                                 </Disclosure.Button>
                             </div>
                             <Link to='/'>
-                                <h1 className='logoPiatti text-6xl'>Piatti</h1>
+                                <h1 className='logoPiatti text-5xl hover:text-white focus:outline-none xl:text-6xl'>Piatti</h1>
                             </Link>
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-center">
                                 <div className="flex-shrink-0 flex items-center">
@@ -53,7 +46,7 @@ export default function Example() {
                                                 key={item.name}
                                                 href={item.href}
                                                 className={classNames(
-                                                    'px-3 py-2 rounded-md text-m font-medium'
+                                                    'px-3 py-2 rounded-md text-sm font-medium hover:text-white focus:outline-none xl:text-m'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
@@ -64,11 +57,11 @@ export default function Example() {
                                 </div>
                             </div>
                             <div className="inset-y-0  flex items-between pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                <div className="flex p-1  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">
-                                    <FiMail className='mx-2 text-2xl' />
-                                    <FaWhatsapp className='mx-2 text-2xl' />
-                                    <FaInstagram className='mx-2 text-2xl' />
-                                    <FaFacebook className='mx-2 text-2xl' />
+                                <div className="flex p-1">
+                                    <Link to='#'><FiMail className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></Link>
+                                    <Link to='#'><FaWhatsapp className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></Link>
+                                    <Link to='#'><FaInstagram className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></Link>
+                                    <Link to='#'><FaFacebook className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></Link>
                                 </div>
 
                             </div>
