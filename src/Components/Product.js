@@ -14,15 +14,8 @@ function Product({ e }) {
                 </div>
                 <div className="mt-4 flex justify-between">
                     <div className="w-full">
-                        <h3 className="text-xl text-center text-gray-700">
-                            <a href={e.href}>
-                                <span aria-hidden="true" className="absolute inset-0" />
-                                {e.title}
-                            </a>
-                        </h3>
-                        <p className="mt-1 text-sm text-gray-500">{e.title}</p>
+                        <h3 className="text-xl text-center text-gray-700">{e.title}</h3>
                     </div>
-
                 </div>
             </div>
         </Link>

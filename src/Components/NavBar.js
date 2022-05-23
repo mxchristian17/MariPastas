@@ -6,9 +6,9 @@ import { FiMail } from "react-icons/fi"
 import { Link } from 'react-router-dom'
 
 const navigation = [
-    { name: 'Nuestros Productos', href: '/productos', current: false },
-    { name: 'Sobre Nosotros', href: '#', current: false },
-    { name: 'Contacto', href: '/contact', current: false },
+    { name: 'Nuestros Productos', href: '/products'},
+    { name: 'Sobre Nosotros', href: '#' },
+    { name: 'Contacto', href: '/contact' }
 ]
 
 function classNames(...classes) {
