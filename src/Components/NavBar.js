@@ -1,4 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
+import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa"
@@ -42,16 +43,16 @@ export default function Example() {
                                 <div className="hidden sm:block sm:ml-6">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (
-                                            <a
+                                            <Link
                                                 key={item.name}
-                                                href={item.href}
+                                                to={item.href}
                                                 className={classNames(
                                                     'px-3 py-2 rounded-md text-sm font-medium hover:text-white focus:outline-none xl:text-m'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>
