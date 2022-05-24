@@ -14,9 +14,9 @@ function Home() {
             transitionTime={ 1000 }
             interval={ 5000 }
         >
-            <CarouselImage img="assets/img1.png" description="Calidad" />
-            <CarouselImage img="assets/img2.png" description="Calidad" />
-            <CarouselImage img="assets/img3.png" description="Calidad" />
+            <CarouselImage img="assets/img1.png" description="Calidad" align="left" />
+            <CarouselImage img="assets/img2.png" description="Receta familiar" align="right" />
+            <CarouselImage img="assets/img3.png" description="Casero" align="left" />
         </Carousel>
 
         /*<div className="relative bg-white overflow-hidden">

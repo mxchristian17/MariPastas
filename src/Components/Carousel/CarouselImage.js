@@ -4,7 +4,7 @@ import styles from './CarouselImage.module.css'
 
 const CarouselImage = (props) => {
 
-    const { img, description } = props;
+    const { img, description, align } = props;
 
     const imgStyle= {
         width: '100%',
@@ -14,11 +14,16 @@ const CarouselImage = (props) => {
         backgroundPosition: 'center center'
     }
 
+    const descriptionAlign = {textAlign: align}
+
   return (
     <div style={imgStyle}>
 
-      <div className={styles.descriptionStyle}>{description}</div>
-      <Link to="/products" className={styles.labelStyle}>Conocé nuestros productos</Link>
+      <img src="assets/piatti_logo.png" className={styles.logo} alt="logo" />
+      <div className={styles.description} style={descriptionAlign}>
+        {description.split(" ").map( word => { return <div key={word}>{word}</div> })}
+      </div>
+      <Link to="/products" className={styles.label}>Conocé nuestros productos</Link>
       
     </div>
   )

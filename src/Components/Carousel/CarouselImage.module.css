@@ -1,4 +1,4 @@
-.labelStyle {
+.label {
   position: absolute;
   left: 0;
   right: 0;
@@ -9,30 +9,42 @@
   max-width: 180px;
   height: 4em;
   line-height: 1.2em;
-  color: white;
-  text-shadow: 1px 1px 2px #333333;
-  background-color: rgb(100, 100, 100);
+  color: rgb(192,165,107);
+  font-weight: 600;
+  background-color: rgb(17, 17, 17);
   border-radius: 2em;
-  border: 2px solid white;
+  border: 2px solid rgb(192,165,107);
   box-shadow: 1px 1px 2px #333333;
 }
 
-.descriptionStyle {
+.description {
   position: absolute;
   width: 100%;
-  padding-right: 3rem;
-  padding-top: 30px;
-  text-align: right;
+  bottom:30vh;
+  padding-right: 4rem;
+  padding-left: 4rem;
   color: white;
   font-weight: 600;
-  font-size: 6rem;
+  font-size: 4rem;
+  line-height:4rem;
   text-shadow: 1px 1px 2px #333333;
 }
 
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width:40vw !important;
+  max-width:200px;
+}
+
 @media (max-width: 600px) {
-  .descriptionStyle {
+  .description {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     padding-right: 0px;
   }
 }

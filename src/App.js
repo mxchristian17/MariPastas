@@ -4,7 +4,7 @@ import { GeneralContextProvider } from './Context/GeneralContext';
 import Home from './Components/Home';
 import Form from './Components/Form';
 import  NavBar from './Components/NavBar'
-import Banner from './Components/Banner/Banner';
+//import Banner from './Components/Banner/Banner';
 import Footer from './Components/Footer';
 import ListProducts from './Components/ListProducts';
 
@@ -21,7 +21,7 @@ function App() {
       <GeneralContextProvider>
         <BrowserRouter>
           <NavBar links={links}/>
-          <Banner />
+          {/* <Banner /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Form />} />
