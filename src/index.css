@@ -11,7 +11,7 @@
     src: url('./Components/Banner/Georgia.ttf');
 }
 *{
-    font-family: georgia, 'Times New Roman', Times, serif;
+    font-family: georgia,'Times New Roman', Times, serif;
 }
 .fondoDorado{
     background-color: #D6B36A;

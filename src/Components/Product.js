@@ -14,7 +14,7 @@ function Product({ e }) {
                 </div>
                 <div className="mt-4 flex justify-between">
                     <div className="w-full">
-                        <h3 className="text-xl text-center text-gray-700">{e.title}</h3>
+                        <h3 className="text-xl text-center text-gray-700 font-light">{e.title}</h3>
                     </div>
                 </div>
             </div>

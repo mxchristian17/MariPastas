@@ -40,7 +40,7 @@ function ListProducts() {
         )
     }
     return (
-        <div className="grid grid-cols-3 my-10">
+        <div className="grid xl:grid-cols-3 my-10">
             {products.map(e => <Product key={e.id} e={e} />)}
         </div>
     )

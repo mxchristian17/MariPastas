@@ -7,9 +7,9 @@ import { FiMail } from "react-icons/fi"
 import { Link } from 'react-router-dom'
 
 const navigation = [
-    { name: 'Nuestros Productos', href: '/products'},
-    { name: 'Sobre Nosotros', href: '#' },
-    { name: 'Contacto', href: '/contact' }
+    { name: 'Nuestros Productos', href: '/products', current:true},
+    { name: 'Sobre Nosotros', href: '#', current:true},
+    { name: 'Contacto', href: '/contact', current:true }
 ]
 
 function classNames(...classes) {
@@ -69,21 +69,16 @@ export default function Example() {
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="px-2 pt-2 pb-3 space-y-1">
+                    <Disclosure.Panel className="sm:hidden relative">
+                        <div className="relative z-10 flex flex-col bg-stone-500 opacity-90 px-2 pt-2 pb-3 space-y-1">
                             {navigation.map((item) => (
-                                <Disclosure.Button
-                                    key={item.name}
-                                    as="a"
-                                    href={item.href}
-                                    className={classNames(
-                                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                        'block px-3 py-2 rounded-md text-base font-medium'
-                                    )}
-                                    aria-current={item.current ? 'page' : undefined}
+                                <Link
+                                    key={item.name}                                    
+                                    to={item.href}
+                                    className={classNames('hover:bg-gray-600 hover:text-white')}
                                 >
                                     {item.name}
-                                </Disclosure.Button>
+                                </Link>
                             ))}
                         </div>
                     </Disclosure.Panel>
