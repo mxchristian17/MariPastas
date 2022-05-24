@@ -2,11 +2,11 @@ import './App.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { GeneralContextProvider } from './Context/GeneralContext';
 import Home from './Components/Home';
-import Form from './Components/Form';
 import  NavBar from './Components/NavBar'
 //import Banner from './Components/Banner/Banner';
 import Footer from './Components/Footer';
 import ListProducts from './Components/ListProducts';
+import Contact from './Components/Contact/Contact';
 
 const links=[   
   {href:"/", name:"Inicio", id: 1},
@@ -24,7 +24,7 @@ function App() {
           {/* <Banner /> */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Form />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path='/products' element={<ListProducts/>}/>
             <Route path='/products/:id' element={<ListProducts/>}/>
           </Routes>
