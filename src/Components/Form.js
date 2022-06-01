@@ -9,6 +9,7 @@ function Form() {
     const [contact,  setContact] = useState({
         name:'',
         phone:'',
+        select:'distribuidores',
         email:'',
         status: false
     })
@@ -95,7 +96,7 @@ function Form() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
                 <form onSubmit={submit} className="place-self-center w-full">
                     <div className="overflow-hidden md:m-10">
-                        <div className="bg-white px-4 py-5 sm:p-6">
+                        <div className="px-4 py-5 sm:p-6">
                             <div className="grid grid-cols-6 gap-6 text-left">
                                 <div className="col-span-12">
                                     <label
@@ -109,7 +110,7 @@ function Form() {
                                         name="from_name"
                                         id="name"
                                         autoComplete="off"
-                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-xl sm:text-sm border-gray-300 rounded-full py-1 px-4"
+                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
                                         onChange={handleChange}
                                     />
                                     { errors.name && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.name }</div> }
@@ -127,10 +128,33 @@ function Form() {
                                         name="from_email"
                                         id="email"
                                         autoComplete="email"
-                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-xl sm:text-sm border-gray-300 rounded-full py-1 px-4"
+                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
                                         onChange={handleChange}
                                     />
                                     { errors.email && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.email }</div> }
+                                </div>
+
+                                <div className="col-span-12">
+                                    <label
+                                        htmlFor="from_contact_type"
+                                        className="block text-md font-medium text-[rgba(160,120,56,1)] pl-4"
+                                    >
+                                        Tipo de contacto
+                                    </label>
+                                    <select
+                                        value={contact.select}
+                                        type="text"
+                                        name="from_contact_type"
+                                        id="select"
+                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
+                                        onChange={handleChange}
+                                    >
+                                        <option value="distribuidores">Distribuidores, revendedores, mayoristas</option>
+                                        <option value="cooperadoras">Cooperadoras Escolares e Instituciones sociales</option>
+                                        <option value="minoristas">Comercios minoristas</option>
+                                        <option value="consumidores">Consumidores</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
                                 </div>
 
                                 <div className="col-span-12">
@@ -144,7 +168,7 @@ function Form() {
                                         name="message"
                                         id="message"
                                         autoComplete="message"
-                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-xl sm:text-sm border-gray-300 rounded-2xl py-1 px-4"
+                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-2xl py-1 px-4"
                                     ></textarea>
                                 </div>
                                 
@@ -162,7 +186,7 @@ function Form() {
                 </form>
                 <div className="w-full h-full max-w-md max-h-80 place-self-center">
                 <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54499.45208937601!2d-64.0818412!3d-31.3806139!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943297ee5bcae2b1%3A0x354eb1eefbf3944c!2sPasta%20Nostra!5e0!3m2!1ses-419!2sar!4v1653433682729!5m2!1ses-419!2sar"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13371.129341238697!2d-61.7909933!3d-33.0885106!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa67dd172b06e2c8b!2sPiatti%20Pastas!5e0!3m2!1ses-419!2sar!4v1654123111428!5m2!1ses-419!2sar"
                 title="map"
                 style={{border: 0}}
                 allowFullScreen=""

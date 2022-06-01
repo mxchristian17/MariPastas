@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+
 import styles from './CarouselImage.module.css'
 
 const CarouselImage = (props) => {
@@ -22,9 +22,8 @@ const CarouselImage = (props) => {
 
       <img src="assets/piatti_logo.png" className={styles.logo} alt="logo" />
       <div className={styles.description} style={descriptionAlign}>
-        {description.split(" ").map( word => { return <div key={word}>{word}</div> })}
+          {description.split(" ").map( word => { return <div key={word}>{word}</div> })}
       </div>
-      <Link to="/products" className={styles.label}>Conocé nuestros productos</Link>
       
     </div>
   )

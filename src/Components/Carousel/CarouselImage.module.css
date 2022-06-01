@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0.8em 20px 0px 20px;
-  bottom: 3rem;
+  top: 70vh;
   max-width: 180px;
   height: 4em;
   line-height: 1.2em;
@@ -42,7 +42,7 @@
   max-width:200px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .description {
     text-align: center;
     font-size: 3rem;
@@ -55,5 +55,14 @@
     padding: 0.6em 20px 0px 20px;
     height: 3.2em;
     line-height: 1em;
+  }
+}
+
+@media (min-width: 1500px) {
+  .description {
+    max-width: 1500px !important;
+    margin-left: calc( 50% - 750px ) !important;
+    font-size: 6rem;
+    line-height:6rem;
   }
 }
