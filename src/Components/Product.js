@@ -9,7 +9,7 @@ function Product({ e }) {
                     <img
                         src={e.imageSrc}
                         alt={e.imageAlt}
-                        className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                        className="w-full h-full object-center object-cover lg:w-full lg:h-48 "
                     />
                 </div>
                 <div className="mt-4 flex justify-between">

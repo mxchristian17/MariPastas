@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
+import { FaRegTimesCircle } from "react-icons/fa"
 
 function ProductDetail({ e: { title, ingredientes, imageSrc, imageAlt, receta } }) {
     return (
-        <div className="relative container xl:w-3/4 m-auto">
+        <div className="relative container xl:w-3/4 my-12">
             <div className="group flex flex-row flex-wrap relative">
                 <div className="xl:w-1/3 flex m-auto justify-around bg-gray-200 aspect-w-1 aspect-h-1 rounded-xl overflow-hidden group-hover:opacity-75 lg:h-2/3  lg:aspect-none">
                     <img
@@ -22,7 +23,7 @@ function ProductDetail({ e: { title, ingredientes, imageSrc, imageAlt, receta } 
                     </div>
                 </div>
             </div>
-            <Link to='/products' className="absolute btn  text-lg xl:text-3xl bg-slate-500 my-auto pb-1 px-3 rounded-full text-white right-1 top-1" >x</Link>
+            <Link to='/products' className="absolute btn  text-lg xl:text-3xl bg-slate-500 my-auto  rounded-full text-white right-1 top-1" ><FaRegTimesCircle/></Link>
         </div>
     )
 }

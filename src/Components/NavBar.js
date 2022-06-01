@@ -21,7 +21,7 @@ export default function Example() {
         <Disclosure as="nav" className="fondoDorado textoDorado h-24">
             {({ open }) => (
                 <>
-                    <div className="header h-20 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                    <div className="header h-20 w-full mx-auto px-2 sm:px-6">
                         <div className="relative flex items-center justify-between h-20">
                             <div className="absolute inset-y-0 right-40 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
