@@ -8,6 +8,7 @@ const CarouselImage = (props) => {
 
     const imgStyle= {
         width: '100%',
+        maxWidth: '100vw',
         minHeight:'70vh',
         backgroundSize: 'cover',
         backgroundImage: 'url(' + img + ')',

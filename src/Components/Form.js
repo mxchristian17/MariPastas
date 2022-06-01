@@ -91,16 +91,16 @@ function Form() {
     }
 
     return (
-        <div>
-            <div className="grid mt-5 md:mt-0 md:col-span-2 w-full">
-                <form onSubmit={submit} className="place-self-center w-full md:w-1/2">
-                    <div className="shadow overflow-hidden sm:rounded-md md:m-10">
-                        <div className="bg-slate-400 px-4 py-5 sm:p-6">
-                            <div className="grid grid-cols-6 gap-6">
+        <div className="container mx-auto mt-5 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
+                <form onSubmit={submit} className="place-self-center w-full">
+                    <div className="overflow-hidden md:m-10">
+                        <div className="bg-white px-4 py-5 sm:p-6">
+                            <div className="grid grid-cols-6 gap-6 text-left">
                                 <div className="col-span-12">
                                     <label
                                         htmlFor="from_name"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-md font-medium text-[rgba(160,120,56,1)] pl-4"
                                     >
                                         Nombre y Apellido
                                     </label>
@@ -109,7 +109,7 @@ function Form() {
                                         name="from_name"
                                         id="name"
                                         autoComplete="off"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md p-1"
+                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-xl sm:text-sm border-gray-300 rounded-full py-1 px-4"
                                         onChange={handleChange}
                                     />
                                     { errors.name && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.name }</div> }
@@ -118,7 +118,7 @@ function Form() {
                                 <div className="col-span-12">
                                     <label
                                         htmlFor="from_email"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-md font-medium text-[rgba(160,120,56,1)] pl-4"
                                     >
                                         Email
                                     </label>
@@ -127,7 +127,7 @@ function Form() {
                                         name="from_email"
                                         id="email"
                                         autoComplete="email"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full md:text-xl shadow-sm sm:text-sm border-gray-300 rounded-md p-1"
+                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-xl sm:text-sm border-gray-300 rounded-full py-1 px-4"
                                         onChange={handleChange}
                                     />
                                     { errors.email && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.email }</div> }
@@ -136,7 +136,7 @@ function Form() {
                                 <div className="col-span-12">
                                     <label
                                         htmlFor="message"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-md font-medium text-[rgba(160,120,56,1)] pl-4"
                                     >
                                         Mensaje
                                     </label>
@@ -144,22 +144,32 @@ function Form() {
                                         name="message"
                                         id="message"
                                         autoComplete="message"
-                                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-xl sm:text-sm border-gray-300 rounded-md"
+                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-xl sm:text-sm border-gray-300 rounded-2xl py-1 px-4"
                                     ></textarea>
                                 </div>
                                 
                             </div>
                         </div>
-                        <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                        <div className="px-4 py-3 bg-gray-50 text-center sm:px-6">
                             <button
                                 type="submit"
-                                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                className="inline-flex justify-center py-1 px-6 border border-transparent shadow-sm text-sm font-medium rounded-full text-white bg-[rgba(214,179,106,1)] hover:bg-[rgba(214,179,106,0.8)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[rgba(214,179,106,1)]"
                             >
                                 Enviar
                             </button>
                         </div>
                     </div>
                 </form>
+                <div className="w-full h-full max-w-md max-h-80 place-self-center">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54499.45208937601!2d-64.0818412!3d-31.3806139!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943297ee5bcae2b1%3A0x354eb1eefbf3944c!2sPasta%20Nostra!5e0!3m2!1ses-419!2sar!4v1653433682729!5m2!1ses-419!2sar"
+                title="map"
+                style={{border: 0}}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-2xl w-full h-full"></iframe>
+                </div>
             </div>
         </div>
     );
