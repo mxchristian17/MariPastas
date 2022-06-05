@@ -3,13 +3,13 @@ import { FaRegTimesCircle } from "react-icons/fa"
 
 function ProductDetail({ e: { title, ingredientes, imageSrc, imageAlt, receta } }) {
     return (
-        <div className="relative container xl:w-3/4 my-12">
+        <div className="flex justify-between relative container md:px-10 my-12">
             <div className="group flex flex-row flex-wrap relative">
-                <div className="xl:w-1/3 flex m-auto justify-around bg-gray-200 aspect-w-1 aspect-h-1 rounded-xl overflow-hidden group-hover:opacity-75 lg:h-2/3  lg:aspect-none">
+                <div className="xl:w-1/3 xl:mx-0 mx-5 flex m-auto justify-around bg-gray-200 aspect-w-1 aspect-h-1 rounded-[55px] overflow-hidden group-hover:opacity-75 lg:h-full  lg:aspect-none  shadow-lg shadow-slate-500">
                     <img
                         src={imageSrc}
                         alt={imageAlt}
-                        className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                        className="w-full h-full object-center object-cover lg:w-full lg:h-full "
                     />
                 </div>
                 <div className="my-2 xl:w-2/3 flex justify-between">

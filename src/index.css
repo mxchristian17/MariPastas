@@ -10,9 +10,9 @@
     font-family: georgia;
     src: url('./Components/Banner/Georgia.ttf');
 }
-*{
+/* *{
     font-family: georgia,'Times New Roman', Times, serif;
-}
+} */
 .fondoDorado{
     background-color: #D6B36A;
 }
@@ -31,6 +31,9 @@
 }
 #textoFooter{
     color: #000000;
+}
+.textoShadow{
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
 }
 .logoPiatti{
     font-family: vladimir;

@@ -31,17 +31,23 @@ const products = [
 ]
 
 function ListProducts() {
-    const { id } = useParams()    
+    const { id } = useParams()
     if (id) {
         return (
-            <div className="flex m-12 h-4/5">
-                <ProductDetail key={id} e={products.find(product=>product.id===Number(id))} />
+            <div className="flex-col w-full">
+                <h1 className="textoShadow text-4xl md:text-5xl my-10 font-light textoDorado">Nuestro Productos</h1>
+                <div className="d-flex w-full justify-between">
+                    <ProductDetail key={id} e={products.find(product => product.id === Number(id))} />
+                </div>
             </div>
         )
     }
     return (
-        <div className="grid xl:grid-cols-3 my-20">
-            {products.map(e => <Product key={e.id} e={e} />)}
+        <div className="">
+            <h1 className="textoShadow text-4xl md:text-5xl my-10 font-light textoDorado">Nuestro Productos</h1>
+            <div className="grid xl:grid-cols-3 mb-8">
+                {products.map(e => <Product key={e.id} e={e} />)}
+            </div>
         </div>
     )
 }
