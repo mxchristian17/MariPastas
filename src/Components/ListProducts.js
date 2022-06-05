@@ -9,7 +9,7 @@ const products = [
         title: "Tallarines con epsinaca",
         receta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ea qui, quidem excepturi rerum totam molestias repellat at iure expedita, ipsam, perferendis maiores et quibusdam officiis earum labore libero illo.",
         ingredientes: "Harina de trigo enriquecida según Ley 25630 (adicionada con hierro (30 mg/kg), ácido fólico (2,2 mg/kg), tiamina (B1) (6,3 mg/kg, riboflavina (B2) (1,3 mg/kg, niacina (13 mg/kg)), Agua potable, espinaca deshidratada, sal, huevo",
-        imageSrc: "/assets/Tallarines de espinaca.jpg",
+        imageSrc: "/assets/Espinaca.png",
         imageAlt: "alt"
     },
     {
@@ -17,7 +17,7 @@ const products = [
         title: "Fettuccine al huevo",
         receta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ea qui, quidem excepturi rerum totam molestias repellat at iure expedita, ipsam, perferendis maiores et quibusdam officiis earum labore libero illo.",
         ingredientes: "Harina de trigo enriquecida según Ley 25630 (adicionada con hierro (30 mg/kg), ácido fólico (2,2 mg/kg), tiamina (B1) (6,3 mg/kg, riboflavina (B2) (1,3 mg/kg, niacina (13 mg/kg)), Agua potable, huevo, sal, colorante: cúrcuma INS 100 i.",
-        imageSrc: "/assets/img2.png",
+        imageSrc: "/assets/Fetuccini.png",
         imageAlt: "alt"
     },
     {
@@ -25,7 +25,7 @@ const products = [
         title: "Tallarines al huevo",
         receta: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ea qui, quidem excepturi rerum totam molestias repellat at iure expedita, ipsam, perferendis maiores et quibusdam officiis earum labore libero illo.",
         ingredientes: "Harina de trigo enriquecida según Ley 25630 (adicionada con hierro (30 mg/kg), ácido fólico (2,2 mg/kg), tiamina (B1) (6,3 mg/kg, riboflavina (B2) (1,3 mg/kg, niacina (13 mg/kg)), Agua potable, huevo, sal, colorante: cúrcuma INS 100 i.",
-        imageSrc: "/assets/img1.png",
+        imageSrc: "/assets/Tallarines.png",
         imageAlt: "alt"
     }
 ]
