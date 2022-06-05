@@ -1,23 +1,29 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import CarouselImage from "./Carousel/CarouselImage";
+import { Link } from 'react-router-dom';
+import styles from './Carousel/CarouselImage.module.css'
 
 function Home() {
     return (
-        <Carousel
-            showThumbs={ false }
-            showStatus={ false }
-            showIndicators={ false }
-            dynamicHeight={ false }
-            infiniteLoop={ true }
-            autoPlay={ true }
-            transitionTime={ 1000 }
-            interval={ 5000 }
-        >
-            <CarouselImage img="assets/img1.png" description="Calidad" align="left" />
-            <CarouselImage img="assets/img2.png" description="Receta familiar" align="right" />
-            <CarouselImage img="assets/img3.png" description="Casero" align="left" />
-        </Carousel>
+        <div>
+            <Carousel
+                showThumbs={ false }
+                showStatus={ false }
+                showIndicators={ true }
+                dynamicHeight={ false }
+                infiniteLoop={ true }
+                autoPlay={ true }
+                transitionTime={ 1000 }
+                interval={ 5000 }
+                stopOnHover={ false }
+            >
+                <CarouselImage img="assets/img1.png" description="Calidad" align="left" />
+                <CarouselImage img="assets/img2.png" description="Receta familiar" align="right" />
+                <CarouselImage img="assets/img3.png" description="Casero" align="left" />
+            </Carousel>
+            <Link to="/products" className={styles.label}>Conocé nuestros productos</Link>
+        </div>
 
         /*<div className="relative bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto">

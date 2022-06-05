@@ -7,6 +7,7 @@ import  NavBar from './Components/NavBar'
 import Footer from './Components/Footer';
 import ListProducts from './Components/ListProducts';
 import Contact from './Components/Contact/Contact';
+import AboutUs from './Components/AboutUs';
 
 const links=[   
   {href:"/", name:"Inicio", id: 1},
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<AboutUs />} />
             <Route path='/products' element={<ListProducts/>}/>
             <Route path='/products/:id' element={<ListProducts/>}/>
           </Routes>
