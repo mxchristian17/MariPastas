@@ -92,9 +92,9 @@ function Form() {
     }
 
     return (
-        <div className="container mx-auto mt-5 text-center">
+        <div className="container mx-auto mt-1 text-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
-                <form onSubmit={submit} className="place-self-center w-full">
+                <form onSubmit={submit} className="place-self-center w-full mt-0">
                     <div className="overflow-hidden md:m-10">
                         <div className="px-4 py-5 sm:p-6">
                             <div className="grid grid-cols-6 gap-6 text-left">
@@ -192,7 +192,7 @@ function Form() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-2xl w-full h-full"></iframe>
+                className="rounded-2xl w-full h-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)]"></iframe>
                 </div>
             </div>
         </div>

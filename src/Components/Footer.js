@@ -1,5 +1,6 @@
 import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
+import WhatsappWidget from "./WhatsappWidget"
 
 function Footer() {
     return (
@@ -21,6 +22,7 @@ function Footer() {
                 </div>
             </div>
             <p className="fondoDorado text-xs xl:text-md  text-white">Copyright 2020 Piatti pastas. Todos los derechos reservados</p>
+            <WhatsappWidget />
         </div>
     )
 }
