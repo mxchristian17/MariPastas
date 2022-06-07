@@ -61,9 +61,9 @@ export default function Example() {
                             <div className="inset-y-0  flex items-between pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 <div className="flex p-1">
                                     <a href='mailto:lucas@gmail.com'><FiMail className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
-                                    <a href='https://api.whatsapp.com/send?phone=5493413010732'><FaWhatsapp className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
-                                    <a href='https://www.instagram.com/piattipastas/'><FaInstagram className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
-                                    <a href='https://www.facebook.com//'><FaFacebook className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
+                                    <a href='https://api.whatsapp.com/send?phone=5493413010732' target="_blank"><FaWhatsapp className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
+                                    <a href='https://www.instagram.com/piattipastas/' target="_blank"><FaInstagram className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
+                                    <a href='https://www.facebook.com/' target="_blank"><FaFacebook className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
                                 </div>
 
                             </div>
