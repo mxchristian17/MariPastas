@@ -45,7 +45,7 @@ function ListProducts() {
     return (
         <div className="">
             <h1 className="textoShadow text-4xl md:text-5xl my-10 font-light textoDorado">Nuestro Productos</h1>
-            <div className="grid xl:grid-cols-3 mb-8">
+            <div className="grid xl:grid-cols-3 my-8">
                 {products.map(e => <Product key={e.id} e={e} />)}
             </div>
         </div>
