@@ -33,7 +33,7 @@
     color: #000000;
 }
 .textoShadow{
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    text-shadow: 0px 1px 4px rgba(0,0,0,0.4);
 }
 .logoPiatti{
     font-family: vladimir;
