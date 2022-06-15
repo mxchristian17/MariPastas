@@ -110,7 +110,7 @@ function Form() {
                                         name="from_name"
                                         id="name"
                                         autoComplete="off"
-                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
+                                        className="mt-1 text-stone-400 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
                                         onChange={handleChange}
                                     />
                                     { errors.name && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.name }</div> }
@@ -128,7 +128,7 @@ function Form() {
                                         name="from_email"
                                         id="email"
                                         autoComplete="email"
-                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
+                                        className="mt-1 text-stone-400 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
                                         onChange={handleChange}
                                     />
                                     { errors.email && <div className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{ errors.email }</div> }
@@ -146,7 +146,7 @@ function Form() {
                                         type="text"
                                         name="from_contact_type"
                                         id="select"
-                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
+                                        className="mt-1 text-stone-400 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-full py-1 px-4"
                                         onChange={handleChange}
                                     >
                                         <option value="distribuidores">Distribuidores, revendedores, mayoristas</option>
@@ -168,13 +168,13 @@ function Form() {
                                         name="message"
                                         id="message"
                                         autoComplete="message"
-                                        className="mt-1 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-2xl py-1 px-4"
+                                        className="mt-1 text-stone-400 focus:outline-0 focus:drop-shadow-[0_0_7px_rgba(214,179,106,1)] block w-full drop-shadow-[0_0_7px_rgba(0,0,0,0.35)] md:text-md sm:text-sm border-gray-300 rounded-2xl py-1 px-4"
                                     ></textarea>
                                 </div>
                                 
                             </div>
                         </div>
-                        <div className="px-4 py-3 bg-gray-50 text-center sm:px-6">
+                        <div className="px-4 py-3 text-center sm:px-6">
                             <button
                                 type="submit"
                                 className="inline-flex justify-center py-1 px-6 border border-transparent shadow-sm text-sm font-medium rounded-full text-white bg-[rgba(214,179,106,1)] hover:bg-[rgba(214,179,106,0.8)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[rgba(214,179,106,1)]"
