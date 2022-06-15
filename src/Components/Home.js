@@ -7,7 +7,7 @@ import styles from './Carousel/CarouselImage.module.css'
 function Home() {
     return (
         <div>
-            <Carousel
+            <Carousel            
                 showThumbs={ false }
                 showStatus={ false }
                 showIndicators={ true }

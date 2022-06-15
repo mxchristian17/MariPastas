@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function Product({ e }) {
     return (
-        <Link to={`/products/${e.id}`} className="py-7">
+        <Link to={`/products/${e.id}`} className="py-7 h-80">
             <div className="group relative">
                 <div className="w-2/3 h-1/3 flex m-auto justify-around bg-gray-200  rounded-[55px] aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-2/3  lg:aspect-none shadow-lg shadow-slate-500">
                     <img

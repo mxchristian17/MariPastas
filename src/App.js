@@ -24,7 +24,7 @@ function App() {
           <NavBar links={links}/>
           {/* <Banner /> */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home/>} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path='/products' element={<ListProducts/>}/>
