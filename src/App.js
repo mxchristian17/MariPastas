@@ -18,7 +18,7 @@ const links=[
 
 function App() {
   return (
-    <div className="App">
+    <div className="App relative h-auto min-h-screen">
       <GeneralContextProvider>
         <BrowserRouter>
           <NavBar links={links}/>

@@ -4,7 +4,7 @@ import WhatsappWidget from "./WhatsappWidget"
 
 function Footer() {
     return (
-        <div id="footer" className="bg-gray-200 fixed bottom-0  w-full">
+        <div id="footer" className="bg-gray-200 absolute -bottom-10  w-full">
             <div className="textoDorado inset-y-0  grid grid-cols-3 align-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <div className="flex p-1 align-center my-auto">
                     <a href="mailto:piattipastas@gmail.com" className='mx-2 xl:mx-4 text-lg hover:text-stone-600 focus:outline-none xl:text-2xl'><FiMail/></a>
