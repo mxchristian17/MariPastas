@@ -6,4 +6,4 @@ Real project, benefit of CoderHouse
 
  - Maronas Juan Manuel
  - Orengia Christian Ezequiel
- - Diseñador/a aún no asignado/a
+ - Juan Manuel Valverde
