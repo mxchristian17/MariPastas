@@ -12,7 +12,7 @@ const products = [
         presentacion: "500 GRAMOS.",
         ingredientes: "Harina de trigo enriquecida según Ley 25630 (adicionada con hierro (30 mg/kg), ácido fólico (2,2 mg/kg), tiamina (B1) (6,3 mg/kg, riboflavina (B2) (1,3 mg/kg, niacina (13 mg/kg)), Agua potable, espinaca deshidratada, sal y huevo.",
         imageSrc: "/assets/Espinaca.png",
-        imageAlt: "alt"
+        imageAlt: "imagen fideos"
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const products = [
         presentacion: "500 GRAMOS.",
         ingredientes: "Harina de trigo enriquecida según Ley 25630 (adicionada con hierro (30 mg/kg), ácido fólico (2,2 mg/kg), tiamina (B1) (6,3 mg/kg, riboflavina (B2) (1,3 mg/kg, niacina (13 mg/kg)), Agua potable, huevo, sal, colorante: cúrcuma INS 100 i.",
         imageSrc: "/assets/Fetuccini.png",
-        imageAlt: "alt"
+        imageAlt: "imagen fideos"
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const products = [
         presentacion: "500 GRAMOS.",
         ingredientes: "Harina de trigo enriquecida según Ley 25630 (adicionada con hierro (30 mg/kg), ácido fólico (2,2 mg/kg), tiamina (B1) (6,3 mg/kg, riboflavina (B2) (1,3 mg/kg, niacina (13 mg/kg)), Agua potable, huevo, sal, colorante: cúrcuma INS 100 i.",
         imageSrc: "/assets/Tallarines.png",
-        imageAlt: "alt"
+        imageAlt: "imagen fideos"
     }
 ]
 
