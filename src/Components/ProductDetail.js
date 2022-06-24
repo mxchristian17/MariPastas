@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { FaRegTimesCircle } from "react-icons/fa"
 
-function ProductDetail({ e: { title, ingredientes, imageSrc, imageAlt, receta } }) {
+function ProductDetail({ e: { title, ingredientes, imageSrc, imageAlt, comentario, comentario2, presentacion } }) {
     return (
         <div className="flex justify-between items-center relative container md:px-20 mt-10 min-w-72">
             <div className="group flex flex-row flex-wrap relative mb-32 ">
@@ -17,11 +17,13 @@ function ProductDetail({ e: { title, ingredientes, imageSrc, imageAlt, receta } 
                     <div className="w-full ml-4 flex flex-col justify-around text-left">
                         <div className="">
                             <h3 className="text-xl textoShadow font-light textoDorado">{title}</h3>
-                            <p className="text-sm font-light text-stone-600 ml-6 mr-2">{receta}</p>
+                            <p className="text-sm font-light text-stone-600 ml-4 mr-2 mb-1">{comentario}</p>
+                            <p className="text-sm font-light text-stone-600 ml-4 mr-2 mb-1">{comentario2}</p>
+                            <p className="text-sm font-light text-stone-600 ml-4 mr-2">PRESENTACIÓN: {presentacion}</p>
                         </div>
                         <div className="mt-1">
                             <h4 className="textoDorado text-xl font-light textoShadow" >Ingredientes</h4>
-                            <p className="text-sm font-light text-stone-600 mt-1 ml-6">{ingredientes}</p>
+                            <p className="text-sm font-light text-stone-600 mt-1 ml-4">{ingredientes}</p>
                         </div>
                     </div>
                 </div>
