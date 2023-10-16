@@ -186,7 +186,7 @@ function Form() {
                 </form>
                 <div className="w-full h-full max-w-md max-h-80 place-self-center">
                 <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13371.129341238697!2d-61.7909933!3d-33.0885106!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa67dd172b06e2c8b!2sMari%20Pastas!5e0!3m2!1ses-419!2sar!4v1654123111428!5m2!1ses-419!2sar"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13371.129341238697!2d-61.7909933!3d-33.0885106!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa67dd172b06e2c8b!2sPiatti%20Pastas!5e0!3m2!1ses-419!2sar!4v1654123111428!5m2!1ses-419!2sar"
                 title="map"
                 style={{border: 0}}
                 allowFullScreen=""

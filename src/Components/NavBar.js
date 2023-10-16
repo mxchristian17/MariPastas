@@ -35,7 +35,7 @@ export default function Example() {
                                 </Disclosure.Button>
                             </div>
                             <Link to='/'>
-                                <h1 className='logoMari text-5xl hover:text-white focus:outline-none xl:text-6xl'>Mari</h1>
+                                <h1 className='logoPiatti text-5xl hover:text-white focus:outline-none xl:text-6xl'>Piatti</h1>
                             </Link>
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-center">
                                 <div className="flex-shrink-0 flex items-center">
@@ -60,10 +60,10 @@ export default function Example() {
                             </div>
                             <div className="inset-y-0  flex items-between pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 <div className="flex p-1">
-                                    <a href='mailto:maripastas@gmail.com'><FiMail className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
-                                    <a href='https://api.whatsapp.com/send?phone=54958666895' target="_blank" rel="noreferrer"><FaWhatsapp className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
-                                    <a href='https://www.instagram.com/maripastas/' target="_blank" rel="noreferrer"><FaInstagram className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
-                                    <a href='https://www.facebook.com/maripastas/' target="_blank" rel="noreferrer"><FaFacebook className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
+                                    <a href='mailto:piattipastas@gmail.com'><FiMail className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
+                                    <a href='https://api.whatsapp.com/send?phone=5493467499337' target="_blank" rel="noreferrer"><FaWhatsapp className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
+                                    <a href='https://www.instagram.com/piattipastas/' target="_blank" rel="noreferrer"><FaInstagram className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
+                                    <a href='https://www.facebook.com/piattipastas/' target="_blank" rel="noreferrer"><FaFacebook className='mx-2 text-xl xl:text-2xl hover:text-white focus:outline-none' /></a>
                                 </div>
 
                             </div>
